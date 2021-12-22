@@ -1,4 +1,4 @@
-#Wed Dec 22 21:18:52 CET 2021
-base.0=C\:\\Users\\PC\\Desktop\\letsgooo\\LetsGo\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Wed Dec 22 21:42:45 CET 2021
+base.0=C\:\\Users\\imran\\Downloads\\LetsGo\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
