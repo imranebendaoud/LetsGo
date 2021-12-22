@@ -13,7 +13,6 @@
         android:theme="@style/Theme.LetsGo">
         <activity android:name=".ShowAllAnnonces"></activity>
 <!--        <activity android:name=".listAnnonces" />-->
-        <activity android:name=".Annonces" />
         <activity android:name=".AddAnnonce"></activity>
         <activity android:name=".RegisterForm"></activity>
         <activity
