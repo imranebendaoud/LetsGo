@@ -2,16 +2,21 @@ package com.example.letsgo;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.letsgo.model.Annonce;
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -25,13 +30,30 @@ public class ShowAllAnnonces extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_show_all_annonces);
-        Button addannonce = (Button) findViewById(R.id.button2);
-        addannonce.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.menu_activity_main);
+//        Button addannonce = (Button) findViewById(R.id.button2);
+//        addannonce.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//            }
+//        });
+
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), AddAnnonce.class);
-                startActivity(i);
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if(item.getItemId() == R.id.nav_home){
+                    Log.d("d","clicked home");
+                    Toast.makeText(ShowAllAnnonces.this, "home", Toast.LENGTH_SHORT).show();
+                }
+                if(item.getItemId()==R.id.nav_slideshow){
+                    Intent i = new Intent(getApplicationContext(), AddAnnonce.class);
+                    startActivity(i);
+                }
+                DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+                drawerLayout.closeDrawer(GravityCompat.START);
+                return true;
             }
         });
         List<Annonce> listAnnonces = new ArrayList<Annonce>();

@@ -18,6 +18,7 @@
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
 
     <application
+        android:name="androidx.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
@@ -27,8 +28,11 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.LetsGo" >
-        <activity android:name="com.example.letsgo.ShowAllAnnonces" />
-        <!-- <activity android:name=".listAnnonces" /> -->
+        <activity
+            android:name="com.example.letsgo.Menu"
+            android:label="@string/title_activity_menu"
+            android:theme="@style/Theme.LetsGo.NoActionBar" />
+        <activity android:name="com.example.letsgo.ShowAllAnnonces" /> <!-- <activity android:name=".listAnnonces" /> -->
         <activity android:name="com.example.letsgo.AddAnnonce" />
         <activity android:name="com.example.letsgo.RegisterForm" />
         <activity
