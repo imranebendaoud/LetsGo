@@ -1,8 +1,10 @@
 package com.example.letsgo;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -17,6 +19,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class AddAnnonce extends AppCompatActivity {
     public static final int PICK_IMAGE = 100;
@@ -64,15 +67,18 @@ public class AddAnnonce extends AppCompatActivity {
             }
         });
         saveButton.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onClick(View v) {
                 titreString = titre.getText().toString();
                 descriptionString = description.getText().toString();
                 dureeString = duree.getText().toString();
                 contactString = contact.getText().toString();
-
                 Date date = new Date();
-                if(!TextUtils.isEmpty(titreString)||!TextUtils.isEmpty(descriptionString)||!TextUtils.isEmpty(contactString)){
+                if (imageUri == null){
+                    imageUri=Uri.parse("content://com.android.calendar/");
+                }
+                if(!TextUtils.isEmpty(titreString)&&!TextUtils.isEmpty(descriptionString)&&!TextUtils.isEmpty(dureeString)&&!TextUtils.isEmpty(contactString)&&!TextUtils.isEmpty(maxParticipant.getText().toString())&&!TextUtils.isEmpty(frais.getText().toString())){
                     Log.d("notempty", "doInBackground: ");
                     maxParticipantString = Integer.parseInt(maxParticipant.getText().toString());
                     fraisString = Double.parseDouble(frais.getText().toString());
@@ -80,8 +86,8 @@ public class AddAnnonce extends AppCompatActivity {
                     FirebaseDatabase database = FirebaseDatabase.getInstance("https://mobilefirebase-81e77-default-rtdb.firebaseio.com");
                     DatabaseReference myRef = database.getReference("Database").child("Annonce");
                     myRef.push().setValue(a);
-                    //Intent i = new Intent(getApplicationContext(), ShowAllAnnonces.class);
-                   // startActivity(i);
+                    Intent i = new Intent(getApplicationContext(), ShowAllAnnonces.class);
+                    startActivity(i);
                     Toast.makeText(getApplicationContext(),"Annonce added successfuly !",Toast.LENGTH_SHORT).show();
                 }
                 else{

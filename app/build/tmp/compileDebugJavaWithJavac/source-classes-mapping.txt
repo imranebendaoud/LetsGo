@@ -1,19 +1,19 @@
-com/example/letsgo/CustomListAdapter.java
- com.example.letsgo.CustomListAdapter
- com.example.letsgo.CustomListAdapter$ViewHolder
-com/example/letsgo/ui/slideshow/SlideshowViewModel.java
- com.example.letsgo.ui.slideshow.SlideshowViewModel
+com/example/letsgo/ui/gallery/GalleryFragment.java
+ com.example.letsgo.ui.gallery.GalleryFragment
+ com.example.letsgo.ui.gallery.GalleryFragment$1
 com/example/letsgo/model/User.java
  com.example.letsgo.model.User
+com/example/letsgo/ui/slideshow/SlideshowViewModel.java
+ com.example.letsgo.ui.slideshow.SlideshowViewModel
 com/example/letsgo/DetailsAnnonce.java
  com.example.letsgo.DetailsAnnonce
 com/example/letsgo/ui/home/HomeFragment.java
  com.example.letsgo.ui.home.HomeFragment
  com.example.letsgo.ui.home.HomeFragment$1
-com/example/letsgo/AddAnnonce.java
- com.example.letsgo.AddAnnonce
- com.example.letsgo.AddAnnonce$1
- com.example.letsgo.AddAnnonce$2
+com/example/letsgo/RegisterForm.java
+ com.example.letsgo.RegisterForm
+ com.example.letsgo.RegisterForm$1
+ com.example.letsgo.RegisterForm$2
 com/example/letsgo/ui/gallery/GalleryViewModel.java
  com.example.letsgo.ui.gallery.GalleryViewModel
 com/example/letsgo/model/Annonce.java
@@ -21,27 +21,29 @@ com/example/letsgo/model/Annonce.java
 com/example/letsgo/MenuNav.java
  com.example.letsgo.MenuNav
  com.example.letsgo.MenuNav$1
+com/example/letsgo/BuildConfig.java
+ com.example.letsgo.BuildConfig
 com/example/letsgo/ui/home/HomeViewModel.java
  com.example.letsgo.ui.home.HomeViewModel
+com/example/letsgo/ui/slideshow/SlideshowFragment.java
+ com.example.letsgo.ui.slideshow.SlideshowFragment
+ com.example.letsgo.ui.slideshow.SlideshowFragment$1
 com/example/letsgo/MainActivity.java
  com.example.letsgo.MainActivity
  com.example.letsgo.MainActivity$1
  com.example.letsgo.MainActivity$2
  com.example.letsgo.MainActivity$2$1
-com/example/letsgo/ui/gallery/GalleryFragment.java
- com.example.letsgo.ui.gallery.GalleryFragment
- com.example.letsgo.ui.gallery.GalleryFragment$1
+com/example/letsgo/AddAnnonce.java
+ com.example.letsgo.AddAnnonce
+ com.example.letsgo.AddAnnonce$1
+ com.example.letsgo.AddAnnonce$2
+com/example/letsgo/CustomListAdapter.java
+ com.example.letsgo.CustomListAdapter
+ com.example.letsgo.CustomListAdapter$1
+ com.example.letsgo.CustomListAdapter$ViewHolder
 com/example/letsgo/ShowAllAnnonces.java
  com.example.letsgo.ShowAllAnnonces
  com.example.letsgo.ShowAllAnnonces$1
  com.example.letsgo.ShowAllAnnonces$2
  com.example.letsgo.ShowAllAnnonces$2$1
-com/example/letsgo/BuildConfig.java
- com.example.letsgo.BuildConfig
-com/example/letsgo/RegisterForm.java
- com.example.letsgo.RegisterForm
- com.example.letsgo.RegisterForm$1
- com.example.letsgo.RegisterForm$2
-com/example/letsgo/ui/slideshow/SlideshowFragment.java
- com.example.letsgo.ui.slideshow.SlideshowFragment
- com.example.letsgo.ui.slideshow.SlideshowFragment$1
+ com.example.letsgo.ShowAllAnnonces$2$2

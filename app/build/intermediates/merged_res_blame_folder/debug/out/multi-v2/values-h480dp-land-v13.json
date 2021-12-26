@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/Monsef/Documents/LetsGoFireBase/LetsGo/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h480dp-land-v13/values-h480dp-land-v13.xml",
+            "outputFile": "C:\\Users\\imran\\OneDrive\\Desktop\\New folder\\LetsGo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h480dp-land-v13\\values-h480dp-land-v13.xml",
             "map": [
                 {
-                    "source": "/Users/Monsef/.gradle/caches/transforms-2/files-2.1/ba80b7e1e9bb46ed9d7c5de07dcbc79d/material-1.4.0/res/values-h480dp-land-v13/values-h480dp-land-v13.xml",
+                    "source": "C:\\Users\\imran\\.gradle\\caches\\transforms-2\\files-2.1\\ba80b7e1e9bb46ed9d7c5de07dcbc79d\\material-1.4.0\\res\\values-h480dp-land-v13\\values-h480dp-land-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
