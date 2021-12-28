@@ -1,6 +1,9 @@
 package com.example.letsgo;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -24,6 +27,7 @@ import java.util.Objects;
 public class AddAnnonce extends AppCompatActivity {
     public static final int PICK_IMAGE = 100;
     // Connection connection;
+    AlertDialog.Builder builder;
     EditText titre,description,dateevenement,duree,frais,contact,maxParticipant;
     String titreString,descriptionString,dateevenementString,dureeString,contactString;
     Integer maxParticipantString;
@@ -51,6 +55,7 @@ public class AddAnnonce extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.addannonce);
+        builder = new AlertDialog.Builder(this);
         saveButton = (Button) findViewById(R.id.buttonSave);
         imageButton = (Button) findViewById(R.id.buttonImage);
         image =(ImageView) findViewById(R.id.imageView2);
@@ -79,16 +84,35 @@ public class AddAnnonce extends AppCompatActivity {
                     imageUri=Uri.parse("content://com.android.calendar/");
                 }
                 if(!TextUtils.isEmpty(titreString)&&!TextUtils.isEmpty(descriptionString)&&!TextUtils.isEmpty(dureeString)&&!TextUtils.isEmpty(contactString)&&!TextUtils.isEmpty(maxParticipant.getText().toString())&&!TextUtils.isEmpty(frais.getText().toString())){
-                    Log.d("notempty", "doInBackground: ");
-                    maxParticipantString = Integer.parseInt(maxParticipant.getText().toString());
-                    fraisString = Double.parseDouble(frais.getText().toString());
-                    Annonce a = new Annonce(9,titreString,descriptionString,date,dureeString,maxParticipantString,null,fraisString,imageUri.toString(),contactString);
-                    FirebaseDatabase database = FirebaseDatabase.getInstance("https://mobilefirebase-81e77-default-rtdb.firebaseio.com");
-                    DatabaseReference myRef = database.getReference("Database").child("Annonce");
-                    myRef.push().setValue(a);
-                    Intent i = new Intent(getApplicationContext(), ShowAllAnnonces.class);
-                    startActivity(i);
-                    Toast.makeText(getApplicationContext(),"Annonce added successfuly !",Toast.LENGTH_SHORT).show();
+                    builder.setMessage("Do you want to add this annonce ?")
+                            .setCancelable(false)
+                            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    maxParticipantString = Integer.parseInt(maxParticipant.getText().toString());
+                                    fraisString = Double.parseDouble(frais.getText().toString());
+                                    Annonce a = new Annonce(9,titreString,descriptionString,date,dureeString,maxParticipantString,null,fraisString,imageUri.toString(),contactString);
+                                    FirebaseDatabase database = FirebaseDatabase.getInstance("https://mobilefirebase-81e77-default-rtdb.firebaseio.com");
+                                    DatabaseReference myRef = database.getReference("Database").child("Annonce");
+                                    myRef.push().setValue(a);
+                                    Intent i = new Intent(getApplicationContext(), ShowAllAnnonces.class);
+                                    startActivity(i);
+                                    Toast.makeText(getApplicationContext(),"Annonce added successfuly !",Toast.LENGTH_SHORT).show();
+                                    finish();
+                                    Toast.makeText(getApplicationContext(),"you choose yes action for alertbox",
+                                            Toast.LENGTH_SHORT).show();
+                                }
+                            })
+                            .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    //  Action for 'NO' Button
+                                    dialog.cancel();
+                                    Toast.makeText(getApplicationContext(),"you choose no action for alertbox",
+                                            Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                    AlertDialog alert = builder.create();
+                    alert.setTitle("Alert Dialog");
+                    alert.show();
                 }
                 else{
                     Toast.makeText(getApplicationContext(),"Invalid annonce details !",Toast.LENGTH_SHORT).show();
