@@ -52,18 +52,18 @@ public class CustomListAdapter  extends BaseAdapter implements Filterable {
         if (convertView == null) {
             convertView = layoutInflater.inflate(R.layout.activity_list_annonces, null);
             holder = new ViewHolder();
-            holder.flagView = (ImageView) convertView.findViewById(R.id.annonceImageList);
-            holder.countryNameView = (TextView) convertView.findViewById(R.id.textView3);
-            holder.populationView = (TextView) convertView.findViewById(R.id.textView10);
+            holder.annonceImage = (ImageView) convertView.findViewById(R.id.annonceImageList);
+            holder.annonceTitle = (TextView) convertView.findViewById(R.id.textView3);
+            holder.annonceDescription = (TextView) convertView.findViewById(R.id.textView10);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
 
         Annonce annonce = this.listDataFiltred.get(position);
-        holder.countryNameView.setText(annonce.getTitre());
-        holder.populationView.setText(annonce.getDescription());
-        Picasso.with(context).load(annonce.getImages_url()).resize(100,100).into(holder.flagView);
+        holder.annonceTitle.setText("Title : "+ annonce.getTitre());
+        holder.annonceDescription.setText("Description : " + annonce.getDescription());
+        Picasso.with(context).load(annonce.getImages_url()).resize(100,100).into(holder.annonceImage);
 
 
 //        int imageId = this.getMipmapResIdByName(annonce.getImages_url());
@@ -124,9 +124,9 @@ public class CustomListAdapter  extends BaseAdapter implements Filterable {
 //    }
 
     static class ViewHolder {
-        ImageView flagView;
-        TextView countryNameView;
-        TextView populationView;
+        ImageView annonceImage;
+        TextView annonceTitle;
+        TextView annonceDescription;
     }
 
 }

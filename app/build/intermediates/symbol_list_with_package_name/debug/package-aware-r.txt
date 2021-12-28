@@ -2149,7 +2149,7 @@ id ignore
 id ignoreRequest
 id image
 id imageAnnonce
-id imageButton
+id imageButton2
 id imageView
 id imageView2
 id imageView3
@@ -2430,6 +2430,8 @@ id useLogo
 id user
 id username
 id vertical_only
+id view2
+id view3
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner

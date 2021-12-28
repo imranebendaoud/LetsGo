@@ -16,25 +16,25 @@
         android:rotation="90"
         android:rotationX="0"
         android:rotationY="0"
+        android:src="@drawable/whitebckk"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:srcCompat="@drawable/whitebckk" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="236dp"
         android:layout_height="184dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/letsgologo"
         app:layout_constraintBottom_toTopOf="@+id/username"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.093"
-        tools:srcCompat="@drawable/letsgologo" />
+        app:layout_constraintVertical_bias="0.093" />
 
     <EditText
         android:id="@+id/txtFullName"
@@ -55,9 +55,9 @@
         android:id="@+id/txtUser"
         android:layout_width="170dp"
         android:layout_height="50dp"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginRight="45dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
         android:ems="10"
         android:hint="Lastname"
         android:inputType="textPersonName"
@@ -83,13 +83,18 @@
         android:id="@+id/img"
         android:layout_width="169dp"
         android:layout_height="49dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="45dp"
         android:ems="10"
         android:hint="Image"
         android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/user"
         app:layout_constraintTop_toBottomOf="@+id/txtUser"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="197dp" />
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/pass"

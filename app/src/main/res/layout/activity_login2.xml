@@ -9,19 +9,19 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="560dp"
-        android:layout_height="737dp"
+        android:layout_width="551dp"
+        android:layout_height="644dp"
         android:cropToPadding="false"
         android:rotation="90"
         android:rotationX="0"
         android:rotationY="0"
+        android:src="@drawable/whitebckk"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        android:src="@drawable/whitebckk" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/username"
@@ -97,14 +97,14 @@
         android:id="@+id/imageView3"
         android:layout_width="236dp"
         android:layout_height="184dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="85dp"
+        android:src="@drawable/letsgologo"
         app:layout_constraintBottom_toTopOf="@+id/username"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.554"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.093"
-        android:src="@drawable/letsgologo" />
-
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
