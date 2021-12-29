@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,7 +19,7 @@ public class DetailsAnnonce extends AppCompatActivity {
     TextView title,adresse,description,duree,contact,max_participants,frais;
     ImageView imageAnnonce;
     Annonce annonce;
-
+    Button button;
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +33,14 @@ public class DetailsAnnonce extends AppCompatActivity {
         contact=findViewById(R.id.contact);
         max_participants=findViewById(R.id.availablePlaces);
         frais=findViewById(R.id.frais);
-
-
+        button=findViewById(R.id.buttonLet);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), AddToParticipants.class);
+                startActivity(i);
+            }
+        });
         Log.d("test","details annonce");
         Intent i = getIntent();
         final Annonce[] annonce = {(Annonce) i.getSerializableExtra("Annonce")};

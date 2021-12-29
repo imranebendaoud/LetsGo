@@ -2024,6 +2024,7 @@ id bounceEnd
 id bounceStart
 id btnReg
 id button
+id button2
 id buttonImage
 id buttonLet
 id buttonPanel
@@ -2397,9 +2398,11 @@ id textTop
 id textView
 id textView10
 id textView11
+id textView12
 id textView13
 id textView14
 id textView15
+id textView2
 id textView3
 id textView4
 id textView5
@@ -2448,8 +2451,11 @@ id user
 id username
 id username_et_id
 id vertical_only
+id view
 id view2
 id view3
+id view4
+id view5
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner

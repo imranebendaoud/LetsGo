@@ -34,9 +34,10 @@
             android:theme="@style/Theme.LetsGo.NoActionBar" />
         <activity android:name="com.example.letsgo.ShowAllAnnonces" /> <!-- <activity android:name=".listAnnonces" /> -->
         <activity android:name="com.example.letsgo.AddAnnonce" />
-        <activity android:name="com.example.letsgo.RegisterForm" />
+        <activity android:name="com.example.letsgo.AddToParticipants" />
         <activity android:name="com.example.letsgo.Profile" />
         <activity android:name="com.example.letsgo.ModProfile" />
+        <activity android:name="com.example.letsgo.RegisterForm" />
         <activity
             android:name="com.example.letsgo.DetailsAnnonce"
             android:label="Details Annonce"

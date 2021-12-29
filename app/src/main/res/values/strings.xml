@@ -38,8 +38,8 @@
     <string name="title_activity_menu">Menu</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Administrateur</string>
-    <string name="nav_header_subtitle">admin@gmail.com</string>
+    <string name="nav_header_title">admin admin</string>
+    <string name="nav_header_subtitle">admin@admin.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
