@@ -31,18 +31,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login2);
-       /* Date date = new Date();
-        Annonce a = new Annonce(9,"titre 2","description 2",date,"duree 2",
-                10,null,1000,"https://cutt.ly/vUtK69I","contact 2");
-        FirebaseDatabase database = FirebaseDatabase.getInstance("https://mobilefirebase-81e77-default-rtdb.firebaseio.com");
-        DatabaseReference myRef = database.getReference("Database").child("Annonce");
-        myRef.push().setValue(a);
-        User u = new User("admin","admin","admin","admin@admin.com","admin","imageurl","064545234","marrakech",
-                "bio bio bio","homme",22);
-        FirebaseDatabase database = FirebaseDatabase.getInstance("https://mobilefirebase-81e77-default-rtdb.firebaseio.com");
-        DatabaseReference myRef = database.getReference("Database").child("User");
-        myRef.push().setValue(u);
-*/
         createAccout = (TextView)findViewById(R.id.textView14);
         createAccout.setOnClickListener(new View.OnClickListener() {
             @Override

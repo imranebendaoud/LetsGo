@@ -40,13 +40,6 @@ public class ShowAllAnnonces extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_activity_main);
-//        Button addannonce = (Button) findViewById(R.id.button2);
-//        addannonce.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
         search = (EditText) findViewById(R.id.search);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -100,11 +93,9 @@ public class ShowAllAnnonces extends AppCompatActivity {
 
                     @Override
                     public void onItemClick(AdapterView<?> a, View v, int position, long id) {
-                        Log.d("test","test ana hnaa");
                         Object o = listView.getItemAtPosition(position);
                         Annonce annonce = (Annonce) o;
                         Intent i = new Intent(getApplicationContext(), DetailsAnnonce.class);
-//                Toast.makeText(ShowAllAnnonces.this, "Selected :" + " " + annonce, Toast.LENGTH_LONG).show();
                         i.putExtra("Annonce",annonce);
                         startActivity(i);
                     }

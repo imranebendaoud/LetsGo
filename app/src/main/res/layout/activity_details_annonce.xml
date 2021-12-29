@@ -61,16 +61,7 @@
         tools:layout_editor_absoluteY="314dp" />
 
 
-    <TextView
-        android:id="@+id/availablePlaces"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="12dp"
-        android:text="@string/annonce_availableP"
-        app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/description" />
+
 
     <View
         android:id="@+id/view2"
@@ -95,7 +86,16 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/adresse" />
-
+    <TextView
+        android:id="@+id/availablePlaces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/annonce_availableP"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"

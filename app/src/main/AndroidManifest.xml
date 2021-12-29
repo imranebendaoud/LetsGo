@@ -11,10 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LetsGo">
+        <activity android:name=".AddToParticipants"></activity>
         <activity
             android:name=".Menu"
             android:label="@string/title_activity_menu"
-            android:theme="@style/Theme.LetsGo.NoActionBar"></activity>
+            android:theme="@style/Theme.LetsGo.NoActionBar" />
         <activity android:name=".ShowAllAnnonces" /> <!-- <activity android:name=".listAnnonces" /> -->
         <activity android:name=".AddAnnonce" />
         <activity android:name=".RegisterForm" />

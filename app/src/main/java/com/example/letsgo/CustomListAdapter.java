@@ -64,18 +64,11 @@ public class CustomListAdapter  extends BaseAdapter implements Filterable {
         holder.annonceTitle.setText("Title : "+ annonce.getTitre());
         holder.annonceDescription.setText("Description : " + annonce.getDescription());
         Picasso.with(context).load(annonce.getImages_url()).resize(100,100).into(holder.annonceImage);
-
-
-//        int imageId = this.getMipmapResIdByName(annonce.getImages_url());
-
-//        holder.flagView.setImageResource(imageId);
-
         return convertView;
     }
 
     @Override
     public Filter getFilter() {
-        //filter function
         Filter filter = new Filter() {
             @Override
             protected FilterResults performFiltering(CharSequence constraint) {
@@ -114,14 +107,6 @@ public class CustomListAdapter  extends BaseAdapter implements Filterable {
         return filter;
     }
 
-    // Find Image ID corresponding to the name of the image (in the directory mipmap).
-//    public int getMipmapResIdByName(String resName)  {
-//        String pkgName = context.getPackageName();
-//        // Return 0 if not found.
-//        int resID = context.getResources().getIdentifier(resName , "mipmap", pkgName);
-//        Log.i("CustomListView", "Res Name: "+ resName+"==> Res ID = "+ resID);
-//        return resID;
-//    }
 
     static class ViewHolder {
         ImageView annonceImage;

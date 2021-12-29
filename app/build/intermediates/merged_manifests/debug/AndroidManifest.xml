@@ -28,6 +28,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.LetsGo" >
+        <activity android:name="com.example.letsgo.AddToParticipants" />
         <activity
             android:name="com.example.letsgo.Menu"
             android:label="@string/title_activity_menu"

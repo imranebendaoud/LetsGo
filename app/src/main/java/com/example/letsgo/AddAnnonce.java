@@ -26,7 +26,6 @@ import java.util.Objects;
 
 public class AddAnnonce extends AppCompatActivity {
     public static final int PICK_IMAGE = 100;
-    // Connection connection;
     AlertDialog.Builder builder;
     EditText titre,description,dateevenement,duree,frais,contact,maxParticipant;
     String titreString,descriptionString,dateevenementString,dureeString,contactString;
