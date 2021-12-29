@@ -21,6 +21,7 @@ import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.example.letsgo.model.Annonce;
+import com.example.letsgo.model.User;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -31,6 +32,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ShowAllAnnonces extends AppCompatActivity {
+    User myUser;
     Button addannonce;
     List<Annonce> listAnnonces = new ArrayList<Annonce>();
     EditText search;
@@ -49,6 +51,7 @@ public class ShowAllAnnonces extends AppCompatActivity {
 //        });
         search = (EditText) findViewById(R.id.search);
         NavigationView navigationView = findViewById(R.id.nav_view);
+        myUser = (User)getIntent().getSerializableExtra("myUser");
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -58,6 +61,11 @@ public class ShowAllAnnonces extends AppCompatActivity {
                 }
                 if(item.getItemId()==R.id.nav_slideshow){
                     Intent i = new Intent(getApplicationContext(), AddAnnonce.class);
+                    startActivity(i);
+                }
+                if(item.getItemId()==R.id.nav_gallery){
+                    Intent i = new Intent(getApplicationContext(), Profile.class);
+                    i.putExtra("myUser",myUser);
                     startActivity(i);
                 }
                 DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);

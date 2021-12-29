@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    User myUser;
     TextView createAccout;
     Button loginButton;
     EditText usernametext,passwordtext;
@@ -70,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
                             for (User user : listUsers){
                                 if(user.getUsername().equals(usernametext.getText().toString()) && user.getPassword().equals(passwordtext.getText().toString())){
                                     loginGood = true;
+                                    myUser = user;
                                     Log.d("inside for", loginGood.toString());
                                     break;
                                 }
@@ -85,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
                         if((!TextUtils.isEmpty(usernametext.getText().toString()) || !TextUtils.isEmpty(passwordtext.getText().toString())) && loginGood==true){
                             Intent i = new Intent(getApplicationContext(), ShowAllAnnonces.class);
+                            i.putExtra("myUser",myUser);
                             startActivity(i);
                             Toast.makeText(getApplicationContext(),"login successful",Toast.LENGTH_SHORT).show();
                         }
