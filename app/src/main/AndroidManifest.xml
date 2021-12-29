@@ -18,6 +18,8 @@
         <activity android:name=".ShowAllAnnonces" /> <!-- <activity android:name=".listAnnonces" /> -->
         <activity android:name=".AddAnnonce" />
         <activity android:name=".RegisterForm" />
+        <activity android:name=".Profile" />
+        <activity android:name=".ModProfile" />
         <activity
             android:name=".DetailsAnnonce"
             android:label="Details Annonce"

@@ -4,10 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/imran/OneDrive/Desktop/New folder/LetsGo/app/src/main/res/layout/activity_show_all_annonces.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_modify_profile.xml" value="0.12824074074074074" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.12824074074074074" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
